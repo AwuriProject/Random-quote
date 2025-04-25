@@ -4,6 +4,7 @@ import { RxSwitch } from "react-icons/rx";
 import { CiBookmark } from "react-icons/ci";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+
 const API_OPTIONS = {
   method: "GET",
   headers: {
