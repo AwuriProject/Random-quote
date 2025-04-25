@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { RxSwitch } from "react-icons/rx";
 import { CiBookmark } from "react-icons/ci";
-import { FaBookmark } from "react-icons/fa";
 
+const API_KEY = import.meta.env.VITE_API_KEY;
 const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    "X-Api-Key": `feCk8ztdvliQORDiDIFPWw==SUj4u9O0ZXNEoMAd`,
+    "X-Api-Key": API_KEY,
   },
 };
 
