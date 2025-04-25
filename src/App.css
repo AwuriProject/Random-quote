@@ -1,0 +1,28 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Open Sans", sans-serif;
+}
+.content {
+  padding: 24px;
+}
+.icon {
+  padding-bottom: 24px;
+}
+.buttons {
+  padding: 24px;
+}
+.btn {
+  padding: 8px;
+  margin-top: 24px;
+}
+.random__quote {
+  padding: 16px;
+}

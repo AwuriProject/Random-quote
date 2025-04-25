@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *)) {
+}
+
+@theme {
+  --color-red: red;
+  --inset-shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.8);
+  --font-text: "Open Sans", sans-serif;
+}
+@layer base {
+  body {
+    @apply w-full h-lvh flex justify-center items-center bg-black text-white;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+}
+@layer components {
+  .random__quote {
+    @apply rounded-3xl w-full h-50 flex items-center justify-center text-center;
+  }
+}
+
+@utility flex-content {
+  @apply flex justify-between items-center w-full;
+}
+@utility btn {
+  @apply w-30  text-center rounded-3xl flex items-center justify-center hover:opacity-75 md:w-50;
+}
