@@ -3,7 +3,7 @@ import "./App.css";
 import { RxSwitch } from "react-icons/rx";
 import { CiBookmark } from "react-icons/ci";
 
-const API_KEY = import.meta.env.VITE_API_KEY;
+const API_KEY = "feCk8ztdvliQORDiDIFPWw==SUj4u9O0ZXNEoMAd";
 
 const API_OPTIONS = {
   method: "GET",
@@ -23,9 +23,20 @@ function App() {
   const fetchRandomQuote = async function () {
     try {
       const res = await fetch(api_url, API_OPTIONS);
+      console.log(res);
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
       const data = await res.json();
+      console.log(data);
       console.log(data[0]);
-      setResult(data[0].quote.trim());
+      console.log(data[0].quote);
+
+      if (!data || !data[0].quote) {
+        throw new Error("Missing quote in response");
+      }
+      setResult(data[0].quote);
     } catch (error) {
       console.error(`Error fetching quotes: ${error}`);
       setErrorMessage(`Error fetching quotes. Please try again later!`);
